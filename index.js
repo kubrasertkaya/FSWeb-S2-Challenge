@@ -110,7 +110,7 @@ console.log(cumle);
 /* (Oto test var) cumleKur fonksiyonuna 5 parametre göndererek "Ben iyi bir yazılımcı olacağım!" stringini 
 elde edin, sonucu `bircumle` değişkenine atayın ve konsolde gözlemleyin */
 var bircumle;
-bircumle = cumleKur("Ben iyi bir yazılımcı olacağım!");
+bircumle = cumleKur("Ben", "iyi", "bir", "yazılımcı", "olacağım");
 console.log(bircumle);
 
 /* kodlar buraya */
@@ -141,6 +141,7 @@ function cumlelereDonustur(cumleler, seperator = ",") {
   return yenidizi;
 }
 cumlelereDonustur(cumleler);
+console.log(cumlelereDonustur(cumleler));
 
 /* GÖREV 2:
 		paragrafOlustur fonksiyonuna aşağıdakileri uygulayın.
@@ -155,9 +156,17 @@ cumlelereDonustur(cumleler);
 			6. Oluşturulan paragraf döndürülecek
 	*/
 
-function paragrafOlustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+function paragrafOlustur(cumleler, cumleKur, cumlelereDonustur) {
+  let yeniDizi = cumlelereDonustur(cumleler, " ");
+  return cumleKur(
+    yeniDizi[1],
+    yeniDizi[3],
+    yeniDizi[5],
+    yeniDizi[7],
+    yeniDizi[9]
+  );
 }
+console.log(paragrafOlustur(cumleler, cumleKur, cumlelereDonustur));
 
 /* 	GÖREV 3:
 		Yukarıda isimleri sebzeler ve meyveler olan 2 dizi bulunmaktadır. Bu dizileri kullanarak aşağıdaki görevleri tamamlayın.
